@@ -1,0 +1,104 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: pink;
+  font-family: "Tangerine", cursive;
+}
+
+main {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 90%;
+
+
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.heartCard {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.heartCard:hover {
+  transform: scale(1.1);
+}
+
+.heart-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: openCard 1.2s ease-in-out;
+}
+
+.textDesign {
+  font-size: 50px;
+  fill: white;
+  font-weight: bold;
+  text-anchor: middle;
+  font-family: "Tangerine", cursive;
+  opacity: 0;
+  animation: fadeInText 0.3s forwards 0.5s;
+}
+
+.textDesign2 {
+  font-size:  20px;
+  fill: white;
+  font-weight: bold;
+  text-anchor: middle;
+  font-family: "Tangerine", cursive;
+  opacity: 0;
+  animation: fadeInText 0.3s forwards 0.5s;
+}
+
+.backButton {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.backButton:hover {
+  background-color: red;
+  color: white;
+  transform: scale(1.1);
+}
+
+.backIcon {
+  font-size: 24px;
+}
+@keyframes fadeInText {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes openCard {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+
+
